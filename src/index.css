@@ -1,0 +1,88 @@
+@tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 224 71.4% 4.1%;
+      --card: 0 0% 100%;
+      --card-foreground: 224 71.4% 4.1%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 224 71.4% 4.1%;
+      --primary: 220 90% 50%; /* Vibrant Blue */
+      --primary-foreground: 210 20% 98%;
+      --secondary: 215 27.9% 16.9%;
+      --secondary-foreground: 210 20% 98%;
+      --muted: 215 20.2% 65.1%;
+      --muted-foreground: 215.4 16.3% 46.9%;
+      --accent: 45 90% 55%; /* Vibrant Yellow/Gold */
+      --accent-foreground: 220.9 39.3% 11%;
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 210 20% 98%;
+      --border: 215 20.2% 65.1%;
+      --input: 215 20.2% 65.1%;
+      --ring: 220 90% 50%;
+      --radius: 0.75rem;
+    }
+
+    .dark {
+      --background: 224 71.4% 4.1%; /* Darker blue-gray */
+      --foreground: 210 20% 98%; /* Off-white */
+      --card: 222 47.4% 11.2%; /* Slightly lighter dark blue-gray for cards */
+      --card-foreground: 210 20% 98%;
+      --popover: 224 71.4% 4.1%;
+      --popover-foreground: 210 20% 98%;
+      --primary: 210 90% 60%; /* Lighter, more vibrant blue for dark mode */
+      --primary-foreground: 222.2 47.4% 11.2%;
+      --secondary: 215 27.9% 16.9%; /* Dark slate blue */
+      --secondary-foreground: 210 20% 98%;
+      --muted: 217.9 10.6% 20.8%; /* Darker muted tone */
+      --muted-foreground: 215 20.2% 65.1%;
+      --accent: 40 90% 60%; /* Brighter gold for dark mode */
+      --accent-foreground: 210 20% 98%;
+      --destructive: 0 62.8% 30.6%; /* Darker red */
+      --destructive-foreground: 210 20% 98%;
+      --border: 217.9 10.6% 20.8%; /* Darker border */
+      --input: 217.9 10.6% 20.8%; /* Darker input */
+      --ring: 210 90% 60%;
+    }
+
+    body {
+      @apply bg-background text-foreground;
+      font-family: 'Roboto', sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .font-orbitron {
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .glassmorphism {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .dark .glassmorphism {
+      background: rgba(10, 25, 47, 0.2); /* Darker glass for dark mode */
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .gradient-text {
+      @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600;
+    }
+    .dark .gradient-text {
+      @apply bg-gradient-to-r from-sky-300 via-blue-400 to-indigo-500;
+    }
+
+    .gradient-text-alt {
+       @apply bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-orange-500 to-red-600;
+    }
+    .dark .gradient-text-alt {
+      @apply bg-gradient-to-r from-amber-300 via-orange-400 to-red-500;
+    }
