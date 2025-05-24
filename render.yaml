@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: kango-co-project
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    env: node
+    envVars:
+      - key: NODE_VERSION
+        value: 20.x
+    plan: free
+    healthCheckPath: /
